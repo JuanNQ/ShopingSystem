@@ -1,2 +1,2 @@
 # ShopingSystem
-Repositorio de una tienda online con HTML, CSS Y JS.
+Sistema de compras con tecnología HTML, CSS Y JS.
