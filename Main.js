@@ -173,7 +173,7 @@ function list(arr){
         car.classList.add('car');
         
         const iconCart = document.createElement('img');
-        iconCart.setAttribute('src','/Icons/bt_add_to_cart.svg');
+        iconCart.setAttribute('src','./Icons/bt_add_to_cart.svg');
         
         car.appendChild(iconCart);
         
