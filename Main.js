@@ -1,7 +1,11 @@
+/* Home page */
+
 const productList = [];
 const homeContainer = document.querySelector('.home-container');
 var idImg = 0;
 var idIcon = 0;
+
+/* List of products */
 productList.push({
     idImg: 'img'+idImg++,
     idIcon: 'iconCart'+idIcon++,
@@ -98,42 +102,29 @@ productList.push({
     img: "https://surf3.es/wp-content/uploads/2018/04/next-scooter-azul.jpg",
     information: "- Surf Table - Brank: Next",
 });
-// list1(productList);
-list1(productList);
+listProducts(productList);
+
+/* Product detail */
 const productDetail = document.querySelector('.productDetail');
 detailProductCreate();
+
+/* Shoping cart */
 const shopping = document.querySelector(".shopping");
 const articles = document.querySelector('.articles');
 cardCreate();
 
+/* Querys */
 const navEmail = document.querySelector(".navEmail");
 const container = document.querySelector(".container");
 const iconMenu = document.querySelector(".iconMenu");
 const menu = document.querySelector(".menu");
 const cartNavbar = document.querySelector(".cartNavbar");
 
-// const homeContainer = document.querySelector('.home-container');
-
-
-// console.log(typeof articles);
-// const imgQS = document.querySelector(".img1");
-// const img = document.querySelector(".img");
-// const iconCart = document.createElement('img');
-
-// const iconCartQS = document.querySelector('.iconCart');
-// const close = document.querySelector('.close');
-// const img = document.querySelector(".img");
-// const productDetail = document.querySelector('.productDetail');
-// const iconCartQS = document.querySelector('.iconCart');
-// iconCartQS.addEventListener('click',showProductCard);
-
+/* Events */
 navEmail.addEventListener('click',toggleDesktopMenu);
 iconMenu.addEventListener('click',toggleMobileMenu);
 cartNavbar.addEventListener('click',toggleShoping);
-// iconCart.addEventListener('click',showProductCard);
-// iconCart.addEventListener('click',showProductCard);
-// close.addEventListener('click', closeDetailProduct);
-//  imgQS.addEventListener('click',showDetailProduct);
+
 
 function toggleDesktopMenu(){
     container.classList.toggle('inactive');
@@ -157,16 +148,11 @@ function toggleShoping(){
     'productDetail'?productDetail.classList.toggle('inactive'):"no");
 }
 
-function showDetailProduct(name){
-    // console.log(name);
-    filtro = productList.find(function(producto){
-        return producto.idImg == name;
+function showDetailProduct(numImg){
+    filtroImg = productList.find(function(producto){
+        return producto.idImg == numImg;
     });
-    
-    // console.log(filtro);
-    detailProduct(filtro);
-    
-
+    detailProduct(filtroImg);
     productDetail.classList.remove('inactive');
     console.log(shopping.getAttribute('class','shopping inactive')==
     'shopping'?shopping.classList.toggle('inactive'):"no");
@@ -177,37 +163,16 @@ function closeDetailProduct(){
 }
 
 var priceTotal = 0;
-// const productListCart = [];
-function showProductCard(prueba){
-    filtro = productList.find(function(producto){
-        return producto.idIcon == prueba;
+function showProductCard(numIconCart){
+    filtroIconCart = productList.find(function(producto){
+        return producto.idIcon == numIconCart;
     });
-    priceTotal = priceTotal + filtro.price;
-    console.log(filtro);
-
-    // productListCart.push({
-    //     name: filtro.name,
-    //     amount: 1,
-    // });
-    console.log(filtro.name);
-    // console.log(priceTotal);
-    card(filtro,priceTotal);
+    priceTotal = priceTotal + filtroIconCart.price;
+    card(filtroIconCart,priceTotal);
 }
 
-
-
-
-// productListCart.push({
-//     name: "Ball",
-//     price: 40,
-//     img: "https://falabella.scene7.com/is/image/FalabellaPE/18588637_1?wid=800&hei=800&qlt=70",
-//     information: "Official adidas ball",
-// });
-
-// console.log(productList);
-// const indexProduct = 0;
-
-function list1(arr){
+/* List products */
+function listProducts(arr){
     var i = 0;
     var j = 0;
     for (products of arr) {
@@ -238,13 +203,6 @@ function list1(arr){
         const iconCart = document.createElement('img');
         iconCart.classList.add("iconCart"+(j++));
         iconCart.setAttribute('src','./Icons/bt_add_to_cart.svg');
-        // iconCart.addEventListener('click',function(){showProductCard(products.name)});
-        // iconCart.addEventListener('click',productListCart.push({
-        //          name: products.name,
-        //          price: products.price,
-        //          img: products.img,
-        //          information: products.information,
-        //      }));
         
         car.appendChild(iconCart);
         
@@ -262,6 +220,7 @@ function list1(arr){
     
 }
 
+/* Product detail creation */
 function detailProductCreate(){
     
     const detail = document.createElement('div');
@@ -312,6 +271,7 @@ function detailProductCreate(){
     
 }
 
+/* Product detail Query */
 function detailProduct(product){
     const imgDetail = document.querySelector('.imgDetail');
     const h1Detail = document.querySelector('.h1Detail');
@@ -323,6 +283,7 @@ function detailProduct(product){
     pDetail.innerText = product.information;
 }
 
+/* Card creation */
 function cardCreate(){
 
     const amount = document.createElement('div');
@@ -334,7 +295,6 @@ function cardCreate(){
 
     const p4 = document.createElement('p');
     p4.classList.add('priceTotal');
-    // p4.innerText = "$";
     amount.appendChild(p4);
 
     shopping.appendChild(amount);
@@ -347,6 +307,7 @@ function cardCreate(){
     shopping.appendChild(inputButton);
 }
 
+/* Card detail */
 function card(productCard,priceTotal){
     
     const card = document.createElement('div');
@@ -385,26 +346,27 @@ function card(productCard,priceTotal){
 
 }
 
-
-
+/* Pref. IMG */
 var variablesImg = [];
-var prefijo = 'img';
+var prefijoImg = 'img';
 for (var i = 0; i < productList.length; i++) {
-    variablesImg.push(prefijo+i);
+    variablesImg.push(prefijoImg+i);
   }
-//   console.log(variablesImg);
+/* Querys IMG */
 for (let index = 0; index < productList.length; index++) {
-        variablesImg[index] = document.querySelector(".img"+index);
-        variablesImg[index].addEventListener('click',function() {showDetailProduct("img"+index)});
-        
-     }
-
-var variablesIcon = [];
-var prefijo = 'iconCart';
-for (var i = 0; i < productList.length; i++) {
-    variablesIcon.push(prefijo+i);
+    variablesImg[index] = document.querySelector(".img"+index);
+    variablesImg[index].addEventListener('click',function() {showDetailProduct("img"+index)});
+    
 }
-// console.log(variablesIcon);
+
+
+/* Pref. ICONCART */
+var variablesIcon = [];
+var prefijoIconCart = 'iconCart';
+for (var i = 0; i < productList.length; i++) {
+    variablesIcon.push(prefijoIconCart+i);
+}
+/* Querys Icon Cart */
 for (let index = 0; index < productList.length; index++) {
         variablesIcon[index] = document.querySelector(".iconCart"+index);
         variablesIcon[index].addEventListener('click',function() {showProductCard("iconCart"+index)});

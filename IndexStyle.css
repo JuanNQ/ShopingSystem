@@ -20,7 +20,6 @@ body{
 
 /* Navbar */
 .navbar{
-    /* width: 100%; */
     height: 50px;
     display: flex;
     justify-content: space-between;
@@ -31,15 +30,12 @@ body{
 .navbar .iconMenu{
     display: none;
     cursor: pointer;
-    /* background-color: red; */
 }
 .navbar .logo{
-    /* width: 10%; */
     width: 120px;
     margin-left: 50px;
     margin-right: 10px;
     cursor: pointer;
-    /* background-color: red; */
 }
 .title{
     font-size: var(--lg);
@@ -47,13 +43,10 @@ body{
 }
 .items{
     width: 600px;
-    /* width: 70%; */
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 60px;
-    /* background-color: red; */
-    /* margin-left: 12px; */
 
 }
 .items a:hover{
@@ -64,17 +57,14 @@ body{
     padding-right: 1%;
     padding-top: 5px;
     padding-bottom: 5px;
-    /* background-color: red; */
 }
 .items a{
     text-decoration: none;
     font-size: var(--md);
     color: var(--very-light-pink);
-    /* background-color: red; */
     margin: 0 10px ;
 }
 .navEmail{
-    /* background-color: blue; */
     font-size: var(--sm);
     font-weight: lighter;
     cursor: pointer;
@@ -83,21 +73,14 @@ body{
 .navbarRight{
     display: flex;
     margin-right: 15px;
-    /* background-color: red; */
-    /* justify-content: center; */
-    /* align-items: center; */
-    /* width: 20%; */
-    /* cursor: pointer; */
 }
 .navbarRight .flecha{
     margin-left: 8px;
     margin-right: 20px;
     transform: rotate(90deg);
     cursor: pointer;
-    /* background-color: red; */
 }
 .navbarRight img:last-child{
-    /* background-color: red; */
     cursor: pointer;
 }
 
@@ -116,62 +99,44 @@ body{
 .container ul{
     padding: 0;
     margin: 0;
-    /* background-color: red; */
 }
 .container ul li{
     list-style: none;
     text-align: end;
-    /* background-color: red; */
 }
 .container ul li:last-child{
     padding-top: 20px;
     border-top: 1px solid var(--hospital-green);
-    /* background-color: red; */
 }
 .container ul li:nth-child(1),
 .container ul li:nth-child(2){
     font-weight: bold;
-    /* background-color: red; */
 }
 .container ul li a{
-    /* background-color: red; */
     text-decoration: none;
     margin-bottom: 20px;
     color: var(--black);
     display: inline-block;
-    /* background-color: red; */
 }
 .container ul li:last-child a{
     color: var(--hospital-green);
     font-size: var(--sm);
-    /* background-color: red; */
 }
 
 /* Menu Mobile */
 .menu{
     z-index: 2;
-    /* display: none; */
     background-color: var(--white);
     position: absolute;
     top:50px;
     width: 100%;
     left: 0px;
-    /* margin: 24px; */
-    /* padding-left: 50px; */
-    /* height: auto; */
-    /* display: grid; */
     justify-content: center;
-    /* place-content: center; */
 }
 .lista{
-    /* width: 300px; */
     position: relative;
     width: 150px;
     left: 40px;
-    /* display: grid; */
-    /* left: 100px; */
-    /* padding-top: 20px; */
-    /* padding-left: 120px; */
     margin: 0;
     color: var(--black);
 }
@@ -179,26 +144,21 @@ body{
     display: flex;
     flex-direction: column;
     border-bottom: var(--very-light-pink) solid 1px;
-    /* color: var(--black); */
 }
 .reference{
     font-size: var(--lg);
 }
 .lista li{
-    /* background-color: red; */
     list-style: none;
     font-weight: bold;
     margin-top: 20px;
     margin-bottom: 20px;
-    /* color: var(--black); */
-    /* text-decoration: none; */
 }
 .bottom{
     margin-top: 30px;
     margin-bottom: 60px;
 }
 .emailMobile{
-    /* background-color: red; */
     font-size: var(--sm);
     margin-bottom: 0;
     padding-left: 40px;
@@ -212,7 +172,6 @@ body{
 .up a,
 .bottom a{
     text-decoration: none;
-    /* background-color: red; */
     color: var(--black);
 }
 .signUp{
@@ -226,25 +185,17 @@ body{
 }
 
 /* Shoping cart */
-
 .shopping{
     background-color: var(--white);
     width: 420px;
-    /* height: 100%; */
     position: absolute;
     box-sizing: border-box;
-    /* display: grid;  */
     top: 50px;
     padding: 24px;
     right: 0;
 }
 .articles{
-    /* display: grid;
-    place-items: center end; */
-    /* position: absolute; */
     width: 100%;
-    /* top: 80px; */
-    /* padding: 0 20px; */
 }
 .titleShoping{
     display: flex;
@@ -277,11 +228,9 @@ body{
     border-radius: 8px;
     margin-right: 20px;
     object-fit: contain;
-    /* background-color: red; */
 }
 .card img:nth-child(2){
     margin-left: 20px;
-    /* background-color: red; */
 }
 .amount{
     width: 100%;
@@ -302,7 +251,6 @@ body{
     margin-right: 20px;
     font-weight: bold;
 }
-
 .input-button{
     height: 50px;
     width: 100%;
@@ -318,15 +266,10 @@ body{
 
 
 /* Home page */
-/* .home{
-    width: 100%;
-    position: absolute;
-} */
 .home-container{
     z-index: 1;
     margin-top: 20px;
     display: grid;
-    /* position: relative; */
     place-content: center;
     gap: 26px;
     grid-template-columns: repeat(auto-fill, 240px);
@@ -337,11 +280,9 @@ body{
 .product img:nth-last-child(2){
     width: 240px;
     height: 240px;
-    /* object-fit: cover; */
     object-fit: contain;
     border-radius: 20px;
     cursor: pointer;
-    /* background-color: red; */
 }
 .containerProduct{
     display: flex;
@@ -358,15 +299,11 @@ body{
     color: var(--very-light-pink);
 }
 .car{
-    /* position: absolute; */
     margin: 0;
-    /* z-index: 0; */
     filter: grayscale(100%);
-    /* background-color: red; */
 }
 .car img{
     cursor: pointer;
-    /* background-color: red; */
 }
 
 
@@ -382,7 +319,6 @@ body{
 .detail{
     width: 350px;
     justify-items: center;
-    /* position: relative; */
     display: grid;
 }
 .detail div:first-child{
@@ -394,7 +330,6 @@ body{
     position: absolute;
     background-color: var(--text-input-field);
     cursor: pointer;
-    /* background-color: red; */
 }
 .detail img:nth-child(2){
     border-bottom-left-radius: 16px;
@@ -410,27 +345,23 @@ body{
     font-size: var(--lg);
     margin-bottom: 0;
     color: var(--dark);
-    /* background-color: red; */
 }
 .detail h2{
     font-size: var(--lg);
     color: var(--dark);
     font-weight: lighter;
     margin: 0;
-    /* background-color: red; */
 }
 .detail p{
     font-size: var(--md);
     color: var(--dark);
     font-weight: lighter;
-    /* background-color: red; */
 }
 .detail div:last-child{
     position: relative;
     width: 90%;
     display: grid;
     align-items: center;
-    /* justify-content: center; */
 }
 .detail div:last-child img:nth-child(1){
     color: var(--white);
@@ -448,9 +379,7 @@ body{
     font-size: var(--lg);
     position: absolute;
     z-index: 1;
-    /* background-color: red; */
 }
-
 
 
 @media (max-width:640px) {
@@ -480,7 +409,7 @@ body{
         justify-content: flex-end;
     }
 
-
+    /* Menu Mobile */
     .lista{
             padding: 24px 0 0 0;
     }
@@ -492,12 +421,12 @@ body{
         display: none;
     }
 
-
+    /* Shoping cart */
     .shopping{
         width: 100%;
     }
 
-
+    /* Home page */
     .home-container{
         grid-template-columns: repeat(auto-fill, 140px);
     }
@@ -509,10 +438,7 @@ body{
         height: 140px;
     }
 
-
-    /* .detail div:first-child img:first-child{
-        display: none;
-    } */
+    /* Product detail */
     .productDetail{
         width: 100%;
     }
@@ -524,6 +450,7 @@ body{
 
 
 @media (min-width:641px) {
+    /* Menu Mobile */
     .menu{
         display: none;
     }
